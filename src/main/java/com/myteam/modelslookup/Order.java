@@ -6,12 +6,25 @@ package com.myteam.modelslookup;
 
 public class Order implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Order() {
-    }
+	@org.kie.api.definition.type.Label(value = "Items")
+	private java.util.List<com.myteam.modelslookup.Item> listOfItems;
 
+	public Order() {
+	}
 
+	public java.util.List<com.myteam.modelslookup.Item> getListOfItems() {
+		return this.listOfItems;
+	}
 
+	public void setListOfItems(
+			java.util.List<com.myteam.modelslookup.Item> listOfItems) {
+		this.listOfItems = listOfItems;
+	}
+
+	public Order(java.util.List<com.myteam.modelslookup.Item> listOfItems) {
+		this.listOfItems = listOfItems;
+	}
 
 }
